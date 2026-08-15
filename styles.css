@@ -85,7 +85,9 @@ img { display: block; max-width: 100%; }
 .writing-card h3 { margin: 4rem 0 .5rem; font: 500 clamp(2rem, 3vw, 3.2rem)/1 var(--serif); letter-spacing: -.03em; }
 .sample-focus { color: var(--violet); font: .7rem/1.6 var(--mono); text-transform: uppercase; }
 .writing-card > p:last-of-type { color: var(--muted); }
-.pending-link { margin-top: auto; padding-top: 2rem; font: .68rem var(--mono); text-transform: uppercase; color: var(--muted); }
+.pending-link, .sample-link { margin-top: auto; padding-top: 2rem; font: .68rem var(--mono); text-transform: uppercase; color: var(--muted); }
+.sample-link { width: fit-content; color: var(--ink); font-weight: 500; text-underline-offset: .35rem; transition: color .2s; }
+.sample-link:hover { color: var(--violet); }
 
 .about-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; padding: clamp(6rem, 12vw, 12rem) clamp(1.25rem, 7vw, 8rem); background: var(--paper-deep); }
 .about-copy > p { max-width: 760px; margin: 0 0 1.4rem; font-size: clamp(1.15rem, 1.8vw, 1.55rem); }
