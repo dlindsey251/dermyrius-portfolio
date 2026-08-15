@@ -8,6 +8,9 @@ a { color:inherit; text-underline-offset:2px; }
 h1 { margin:0; font:600 29pt/.82 var(--serif); letter-spacing:-1.2px; }
 .title { margin:8px 0 0; color:var(--violet); font:500 8.3pt var(--mono); text-transform:uppercase; letter-spacing:.4px; }
 address { font-style:normal; font-size:7.6pt; line-height:1.4; text-align:right; }
+.contact-block { display:flex; align-items:flex-end; gap:10px; }
+.portfolio-qr { display:flex; flex-direction:column; align-items:center; gap:2px; font:500 5.8pt var(--mono); text-decoration:none; text-transform:uppercase; letter-spacing:.35px; }
+.portfolio-qr img { display:block; width:55px; height:55px; padding:3px; background:#fff; }
 section { margin-top:10px; }
 h2 { margin:0 0 5px; padding-bottom:2px; border-bottom:1px solid var(--line); font:500 12pt var(--serif); letter-spacing:-.2px; }
 h3 { margin:0; font-size:10.5pt; line-height:1.25; }
@@ -30,4 +33,4 @@ li { margin:1px 0; }
 .skill-line { margin-bottom:4px; }
 @page { size:Letter; margin:0; }
 @media print { body { background:white; } .page-actions { display:none; } .resume { margin:0; box-shadow:none; } a { text-decoration:none; } }
-@media screen and (max-width:850px) { body { background:var(--paper); } .page-actions,.resume { width:100%; } .page-actions { padding:0 18px; } .resume { min-height:0; margin:0; padding:28px 22px; box-shadow:none; } .resume-header,.summary,.entry-pair,.bottom-grid { grid-template-columns:1fr; } address { text-align:left; } .entry-heading { align-items:flex-start; flex-direction:column; gap:2px; } .entry-heading span { text-align:left; } }
+@media screen and (max-width:850px) { body { background:var(--paper); } .page-actions,.resume { width:100%; } .page-actions { padding:0 18px; } .resume { min-height:0; margin:0; padding:28px 22px; box-shadow:none; } .resume-header,.summary,.entry-pair,.bottom-grid { grid-template-columns:1fr; } .contact-block { justify-content:space-between; align-items:flex-start; } address { text-align:left; } .entry-heading { align-items:flex-start; flex-direction:column; gap:2px; } .entry-heading span { text-align:left; } }
