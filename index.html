@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dermyrius Lindsey-Lewis — Narrative Designer, Game Writer, and Developer." />
+    <meta name="theme-color" content="#f3efe6" />
+    <title>Dermyrius Lindsey-Lewis — Narrative Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to work</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Dermyrius Lindsey-Lewis, home">
+        <span>DL</span>
+        <span class="wordmark-name">Dermyrius Lindsey-Lewis</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#writing">Writing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Narrative Designer · Game Writer · Developer</p>
+          <h1>I build stories the player has to <em>do.</em></h1>
+          <p class="hero-intro">My work turns narrative ideas into playable systems—from words with consequences to forests that remember where you've been.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#work">View projects</a>
+            <a class="button button-light" href="#writing">Writing samples</a>
+          </div>
+        </div>
+        <div class="hero-note reveal" aria-label="Design focus">
+          <span class="note-number">01—04</span>
+          <p>Writing creates the rules of the world.</p>
+          <p>Narrative design decides what those rules mean for the player.</p>
+        </div>
+      </section>
+
+      <section class="work-section" id="work">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Four ways into a story.</h2>
+        </div>
+
+        <article class="project project-featured reveal">
+          <a class="project-visual demo-scene" href="https://github.com/dlindsey251/fogbound_demo" target="_blank" rel="noreferrer" aria-label="View Fogbound Demo case study on GitHub">
+            <img class="demo-layer demo-far" src="assets/demo-far.png" alt="" />
+            <img class="demo-layer demo-mid" src="assets/demo-mid.png" alt="" />
+            <img class="demo-layer demo-front" src="assets/demo-front.png" alt="" />
+            <img class="demo-character" src="assets/demo-j.png" alt="J holding his Relic in the forest" />
+            <img class="demo-beast" src="assets/demo-beast.png" alt="The Beast watching from the fog" />
+            <span class="visual-label">Playable prototype · Active development</span>
+          </a>
+          <div class="project-copy">
+            <div class="project-index">01</div>
+            <p class="project-type">2D Narrative Game</p>
+            <h3>Fogbound Demo</h3>
+            <p class="project-question">What if the rules of a fictional universe became the rules of the game?</p>
+            <p>Fog, memory, words, and perception become interconnected systems as J navigates the world after <em>18:21</em>. Whisper Vows offer power at a thematic cost.</p>
+            <ul class="tags" aria-label="Disciplines">
+              <li>Narrative Design</li><li>Game Design</li><li>Writing</li><li>Development</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/dlindsey251/fogbound_demo#readme" target="_blank" rel="noreferrer">Read case study <span>↗</span></a>
+              <a href="https://github.com/dlindsey251/fogbound_demo" target="_blank" rel="noreferrer">Source <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-reverse reveal">
+          <a class="project-visual" href="https://github.com/dlindsey251/fogbound-v" target="_blank" rel="noreferrer">
+            <img src="assets/fogbound-v.png" alt="A lantern-lit trail disappearing into a fogbound forest" />
+            <span class="visual-label">Browser-based interactive narrative</span>
+          </a>
+          <div class="project-copy">
+            <div class="project-index">02</div>
+            <p class="project-type">Interactive Narrative Experience</p>
+            <h3>Fogbound V</h3>
+            <p class="project-question">What if the environment remembered the player?</p>
+            <p>A nonlinear browser experience where looping traversal, persistent state, artifacts, sound, and environmental change make curiosity the primary progression mechanic.</p>
+            <ul class="tags"><li>Interactive Narrative</li><li>Environmental Storytelling</li><li>React</li><li>Zustand</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/dlindsey251/fogbound-v#readme" target="_blank" rel="noreferrer">Read case study <span>↗</span></a>
+              <a href="https://github.com/dlindsey251/fogbound-v" target="_blank" rel="noreferrer">Source <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <a class="project-visual ego-visual" href="https://ego-lime.vercel.app" target="_blank" rel="noreferrer">
+            <img src="assets/ego-box-art.png" alt="EGO game box art featuring its characters and chain mechanic" />
+            <span class="visual-label">Completed · Playable in browser</span>
+          </a>
+          <div class="project-copy">
+            <div class="project-index">03</div>
+            <p class="project-type">Mechanics-as-Metaphor Game</p>
+            <h3>EGO</h3>
+            <p class="project-question">What if internal conflict behaved like a game system?</p>
+            <p>A three-stage Canvas game in which uncertainty slows the player, understanding expands their abilities, and Ego must be contained rather than destroyed.</p>
+            <ul class="tags"><li>Narrative Design</li><li>Game Writing</li><li>JavaScript</li><li>HTML Canvas</li></ul>
+            <div class="project-links">
+              <a href="https://ego-lime.vercel.app" target="_blank" rel="noreferrer">Play EGO <span>↗</span></a>
+              <a href="https://github.com/dlindsey251/ego#readme" target="_blank" rel="noreferrer">Case study <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project project-compact project-reverse reveal">
+          <a class="project-visual worldwarme-visual" href="https://github.com/dlindsey251/worldwarme-project" target="_blank" rel="noreferrer">
+            <img src="assets/worldwarme.png" alt="A burned newspaper reporting the aftermath of the bomb in WorldWarMe" />
+            <span class="visual-label">Completed · Archived</span>
+          </a>
+          <div class="project-copy">
+            <div class="project-index">04</div>
+            <p class="project-type">Early Unity Game</p>
+            <h3>WorldWarMe</h3>
+            <p class="project-question">Where the game-development work began.</p>
+            <p>A 15-level Unity project combining platforming, combat, collectibles, bosses, touch controls, and narrative video sequences.</p>
+            <ul class="tags"><li>Unity</li><li>C#</li><li>Game Design</li><li>Narrative</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/dlindsey251/worldwarme-project#readme" target="_blank" rel="noreferrer">View archive <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="writing-section" id="writing">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected writing</p>
+          <h2>Voice on the page.</h2>
+          <p>Standalone samples demonstrate character, dialogue, tone, and worldbuilding beyond interactive implementation.</p>
+        </div>
+        <div class="writing-grid">
+          <article class="writing-card reveal">
+            <span class="sample-number">W—01</span>
+            <h3>Nested Dolls</h3>
+            <p class="sample-focus">Dialogue · Character dynamics · Humor · Tension</p>
+            <p>A character-focused sample balancing conversational rhythm, conflict, and tonal shifts.</p>
+            <span class="pending-link">Sample being prepared</span>
+          </article>
+          <article class="writing-card reveal">
+            <span class="sample-number">W—02</span>
+            <h3>18:21</h3>
+            <p class="sample-focus">Long-form narrative · Character · Worldbuilding</p>
+            <p>A longer work establishing the characters, history, and consequences that lead into Fogbound Demo.</p>
+            <span class="pending-link">Sample being prepared</span>
+          </article>
+          <article class="writing-card reveal">
+            <span class="sample-number">W—03</span>
+            <h3>Fogbound — Selected Scene</h3>
+            <p class="sample-focus">Atmosphere · Character voice · Environmental prose</p>
+            <p>A focused excerpt showing how the written world's atmosphere informs its interactive adaptations.</p>
+            <span class="pending-link">Excerpt being selected</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-title reveal">
+          <p class="eyebrow">About</p>
+          <h2>I work on both sides of the sentence.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>I'm a writer and developer focused on interactive storytelling. My work sits between narrative design, fiction, and game development, with a particular interest in turning narrative concepts into mechanics.</p>
+          <p>I approach game writing from both sides of implementation: what a story needs to communicate and what the player actually needs to do for that story to work.</p>
+          <div class="skill-columns">
+            <div><h3>Design</h3><p>Narrative systems<br />Environmental storytelling<br />Mechanics as metaphor<br />Interactive progression</p></div>
+            <div><h3>Writing</h3><p>Dialogue<br />Character<br />Worldbuilding<br />Interactive narrative</p></div>
+            <div><h3>Development</h3><p>Unity / C#<br />Python / Pygame<br />JavaScript / Canvas<br />React / Zustand</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <p class="eyebrow reveal">Let's talk</p>
+        <h2 class="reveal">Looking for stories that need to be played.</h2>
+        <div class="contact-actions reveal">
+          <a class="button button-light" href="https://github.com/dlindsey251" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <span class="resume-note">Résumé and direct contact coming next.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Dermyrius Lindsey-Lewis</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
