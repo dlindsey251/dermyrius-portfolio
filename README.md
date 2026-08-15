@@ -15,9 +15,9 @@ Then visit `http://localhost:8080`.
 - Four project summaries and source-backed case-study links
 - Public writing links for *Nested Dolls*, *18:21*, and selected Fogbound stories
 - About, skills, and availability sections
+- Web and downloadable PDF résumé
 
 ## Next content pass
 
-- Add résumé and direct professional contact
 - Add Fogbound Demo gameplay capture
 - Add public play links for Fogbound Demo and Fogbound V when available
