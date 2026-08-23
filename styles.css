@@ -77,6 +77,16 @@ img { display: block; max-width: 100%; }
 .worldwarme-visual > img { object-fit: contain !important; padding: 3rem; background: #050505; }
 .project-compact .project-visual { min-height: 430px; }
 .project-compact .project-visual > img { min-height: 430px !important; }
+.worldwarme-media { grid-column: 1 / -1; order: 3; padding-top: clamp(2rem, 4vw, 4rem); border-top: 1px solid rgba(242,238,229,.2); }
+.worldwarme-media-heading { display: grid; grid-template-columns: minmax(220px,.55fr) minmax(320px,1fr); column-gap: clamp(2rem,7vw,8rem); align-items: end; margin-bottom: 2rem; }
+.worldwarme-media-heading .project-type { grid-column: 1; }
+.worldwarme-media-heading h4 { grid-column: 2; grid-row: 1 / span 2; margin: 0; font: 500 clamp(2rem,4vw,4rem)/.95 var(--serif); letter-spacing: -.035em; }
+.worldwarme-media-heading > p:last-child { grid-column: 2; margin: 1rem 0 0; color: #aaa99f; }
+.worldwarme-video-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1px; background: rgba(242,238,229,.2); border: 1px solid rgba(242,238,229,.2); }
+.worldwarme-video-grid figure { margin: 0; padding: 1rem; background: #10120f; }
+.worldwarme-video-grid video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; object-fit: contain; }
+.worldwarme-video-grid figcaption { display: flex; justify-content: space-between; gap: 1rem; padding-top: .8rem; color: #ded8cd; font: .67rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+.worldwarme-video-grid figcaption span { color: #777970; }
 
 .writing-section { padding: clamp(6rem, 10vw, 10rem) clamp(1.25rem, 7vw, 8rem); }
 .writing-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
@@ -113,6 +123,9 @@ footer a { color: inherit; }
   .project-reverse .project-visual, .project-reverse .project-copy { order: initial; }
   .project-visual, .project-visual > img:not(.demo-layer,.demo-character,.demo-beast) { min-height: 480px; }
   .project-index { margin-bottom: 1.5rem; }
+  .worldwarme-media-heading { grid-template-columns: 1fr; }
+  .worldwarme-media-heading .project-type, .worldwarme-media-heading h4, .worldwarme-media-heading > p:last-child { grid-column: 1; grid-row: auto; }
+  .worldwarme-video-grid { grid-template-columns: 1fr; }
   .writing-grid { grid-template-columns: 1fr; }
   .writing-card { min-height: 310px; }
   .about-section { grid-template-columns: 1fr; }
