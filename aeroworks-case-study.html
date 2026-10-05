@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A Power Platform case study: AI-assisted AeroWorks case triage with Dataverse, Power Automate, and human approval." />
+    <meta name="theme-color" content="#f2eee5" />
+    <title>AeroWorks Case Triage — Dy'on</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .case-hero,.case-section{padding:clamp(3rem,8vw,7rem) clamp(1.25rem,7vw,8rem)}
+      .case-hero{background:var(--paper-deep)}
+      .case-hero h1{max-width:950px;margin:0;font:500 clamp(3.2rem,8vw,7rem)/.95 var(--serif);letter-spacing:-.055em}
+      .case-hero .lede{max-width:760px;font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.7}
+      .case-meta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+      .case-meta span{padding:.4rem .7rem;border:1px solid var(--line);font:.68rem var(--mono);text-transform:uppercase}
+      .case-section h2{font:500 clamp(2rem,4vw,3.4rem)/1 var(--serif);letter-spacing:-.04em}
+      .case-section p,.case-section li{max-width:780px;line-height:1.8}
+      .case-image{margin:2.5rem 0 4rem}
+      .case-image img{width:100%;height:auto;border:1px solid var(--line);background:#fff}
+      .case-image figcaption{padding-top:.7rem;color:var(--muted);font:.68rem var(--mono)}
+      .case-screens{display:grid;gap:3rem}
+      .case-result{padding:1.5rem;border-left:3px solid var(--moss);background:#ffffff70}
+      .case-back{display:inline-flex;margin-top:2rem}
+      @media(max-width:700px){.case-screens{gap:1rem}.case-image{margin:1.5rem 0 2.5rem}}
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to case study</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Dy'on, home"><span>D</span><span class="wordmark-name">Dy'on</span></a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#about">About</a><a href="resume.html">Résumé</a></nav>
+    </header>
+    <main id="main">
+      <section class="case-hero">
+        <p class="eyebrow">Power Platform case study · 2026</p>
+        <h1>AeroWorks Case Triage</h1>
+        <p class="lede">An AI-assisted intake flow that turns new customer requests into structured case data, then asks a person to decide when the request needs review.</p>
+        <div class="case-meta"><span>Power Automate</span><span>Dataverse</span><span>AI prompt</span><span>Human approval</span></div>
+      </section>
+      <section class="case-section">
+        <h2>The challenge</h2>
+        <p>Unclear service requests can be difficult to route consistently. The workflow needed to capture each case, extract useful triage details, and flag uncertain requests for a human decision without allowing AI to make the final call.</p>
+        <h2>The approach</h2>
+        <ol>
+          <li>A new row in the <strong>AeroWorks Cases</strong> Dataverse table starts the flow.</li>
+          <li>An AI prompt summarizes and classifies the request and returns structured fields.</li>
+          <li>Parse JSON makes the response available to update the case record.</li>
+          <li>Cases marked for human review receive an approval request.</li>
+          <li>An approval clears the review flag; a rejection keeps it set for follow-up.</li>
+        </ol>
+        <figure class="case-image"><img src="assets/aeroworks/flow-layout.jpg" alt="Completed Power Automate workflow with AI analysis, a human approval, and separate decision branches" /><figcaption>Final flow layout: the approval outcome controls the case’s review flag.</figcaption></figure>
+      </section>
+      <section class="case-section case-screens">
+        <div>
+          <h2>Validation</h2>
+          <p>Two unclear-request examples were run through the workflow. Both flow runs succeeded, and each approval path updated the intended Dataverse field.</p>
+          <div class="case-result"><strong>Approved — AW-000004:</strong> the approval branch succeeded and set <em>Human Review Required</em> to No.</div>
+          <div class="case-result"><strong>Rejected — AW-000005:</strong> the rejection branch succeeded and left <em>Human Review Required</em> as Yes for follow-up.</div>
+        </div>
+        <figure class="case-image"><img src="assets/aeroworks/approved-run.jpg" alt="Successful approved Power Automate run" /><figcaption>Approved run: Update a row 1 succeeded; the rejection update was skipped.</figcaption></figure>
+        <figure class="case-image"><img src="assets/aeroworks/rejected-run.jpg" alt="Successful rejected Power Automate run" /><figcaption>Rejected run: Update a row 2 succeeded.</figcaption></figure>
+        <figure class="case-image"><img src="assets/aeroworks/final-case-flags.jpg" alt="Dataverse case table showing AW-000004 with human review No and AW-000005 with Yes" /><figcaption>Final Dataverse values for both test cases.</figcaption></figure>
+      </section>
+      <section class="case-section">
+        <h2>What I learned</h2>
+        <p>End-to-end testing surfaced how important exact Dataverse field types and approval outcomes are to reliable automation. Checking the saved records after each run confirmed the full path, from AI analysis through the human decision, rather than relying on a successful flow status alone.</p>
+        <p class="eyebrow">Scope note</p>
+        <p>This is a portfolio demonstration in a personal Power Platform environment, not a production AeroWorks deployment. AI output is advisory, and a human makes the final approval decision. Rejected cases are flagged for follow-up; their Status field is not changed.</p>
+        <a class="button button-dark case-back" href="index.html#work">Back to selected work</a>
+      </section>
+    </main>
+  </body>
+</html>

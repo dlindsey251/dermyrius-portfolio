@@ -12,10 +12,13 @@ Then visit `http://localhost:8080`.
 
 ## Included content
 
-- Four project summaries and source-backed case-study links
+- Project summaries and source-backed case-study links, including an AI-assisted Power Platform case triage workflow
 - Public writing links for *Nested Dolls*, *18:21*, and selected Fogbound stories
 - About, skills, and availability sections
 - Web and downloadable PDF résumé
+- AeroWorks AI case triage portfolio page and evidence
+
+The AeroWorks case study is available at [`aeroworks-case-study.html`](aeroworks-case-study.html), with project notes and validation screenshots in [`projects/aeroworks-case-triage/`](projects/aeroworks-case-triage/).
 
 ## Next content pass
 
